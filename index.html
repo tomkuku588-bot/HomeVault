@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>家庭资料收纳协议中心 | HomeVault Legal Center</title>
+  <meta name="description" content="家庭资料收纳 HomeVault 隐私政策与用户协议">
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f6f8fb;
+      --panel: #ffffff;
+      --text: #1f2933;
+      --muted: #5e6b7a;
+      --line: #dbe3ee;
+      --accent: #0f766e;
+      --accent-strong: #0b5f59;
+      --focus: #f59e0b;
+      --shadow: 0 18px 42px rgba(31, 41, 51, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    main {
+      width: min(960px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 56px 0 72px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 34px;
+    }
+
+    .lang-switch {
+      display: inline-flex;
+      gap: 4px;
+      padding: 4px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      box-shadow: var(--shadow);
+    }
+
+    .lang-switch button {
+      min-width: 76px;
+      border: 0;
+      border-radius: 6px;
+      padding: 8px 12px;
+      background: transparent;
+      color: var(--muted);
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .lang-switch button[aria-pressed="true"] {
+      background: var(--accent);
+      color: #ffffff;
+    }
+
+    .lang-switch button:focus-visible,
+    a:focus-visible {
+      outline: 3px solid var(--focus);
+      outline-offset: 3px;
+    }
+
+    .hero {
+      max-width: 760px;
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--accent-strong);
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0 0 14px;
+      font-size: clamp(32px, 5vw, 52px);
+      line-height: 1.15;
+      letter-spacing: 0;
+    }
+
+    p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .links {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+      margin-top: 38px;
+    }
+
+    a.card {
+      display: block;
+      min-height: 184px;
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      color: inherit;
+      text-decoration: none;
+      box-shadow: var(--shadow);
+      transition: border-color 160ms ease, transform 160ms ease;
+    }
+
+    a.card:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    .label {
+      display: inline-block;
+      margin-bottom: 18px;
+      color: var(--accent-strong);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    h2 {
+      margin: 0 0 10px;
+      font-size: 22px;
+      letter-spacing: 0;
+    }
+
+    footer {
+      margin-top: 44px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    [hidden] {
+      display: none !important;
+    }
+
+    @media (max-width: 560px) {
+      main {
+        padding-top: 28px;
+      }
+
+      .topbar {
+        justify-content: stretch;
+      }
+
+      .lang-switch,
+      .lang-switch button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="topbar">
+      <div class="lang-switch" role="group" aria-label="Language switch">
+        <button type="button" data-lang-button="zh" aria-pressed="true">中文</button>
+        <button type="button" data-lang-button="en" aria-pressed="false">English</button>
+      </div>
+    </div>
+
+    <section class="lang-block" data-lang="zh">
+      <div class="hero">
+        <p class="eyebrow">HomeVault Legal Center</p>
+        <h1>家庭资料收纳协议中心</h1>
+        <p>这里提供家庭资料收纳（HomeVault，包名：com.xmgod.familyrecords）的隐私政策和用户协议，用于应用内展示和应用市场审核访问。</p>
+      </div>
+
+      <section class="links" aria-label="协议链接">
+        <a class="card" href="./privacy-policy.html">
+          <span class="label">Privacy Policy</span>
+          <h2>隐私政策</h2>
+          <p>说明应用处理的信息、使用目的、存储方式、权限边界、数据管理方式和开发者联系方式。</p>
+        </a>
+        <a class="card" href="./user-agreement.html">
+          <span class="label">User Agreement</span>
+          <h2>用户协议</h2>
+          <p>说明服务范围、使用规则、数据备份责任、责任边界、协议变更规则和开发者联系方式。</p>
+        </a>
+      </section>
+
+      <footer>生效日期：2026年5月10日 | 联系邮箱：<a href="mailto:tomkuku588@gmail.com">tomkuku588@gmail.com</a></footer>
+    </section>
+
+    <section class="lang-block" data-lang="en" hidden>
+      <div class="hero">
+        <p class="eyebrow">HomeVault Legal Center</p>
+        <h1>HomeVault Legal Center</h1>
+        <p>This page provides the Privacy Policy and User Agreement for HomeVault, also known as 家庭资料收纳, package name com.xmgod.familyrecords, for in-app display and app store review.</p>
+      </div>
+
+      <section class="links" aria-label="Legal document links">
+        <a class="card" href="./privacy-policy.html">
+          <span class="label">Privacy Policy</span>
+          <h2>Privacy Policy</h2>
+          <p>Explains what information the app processes, why it is used, where it is stored, permission boundaries, data management, and developer contact details.</p>
+        </a>
+        <a class="card" href="./user-agreement.html">
+          <span class="label">User Agreement</span>
+          <h2>User Agreement</h2>
+          <p>Explains service scope, usage rules, backup responsibility, liability boundaries, agreement changes, and developer contact details.</p>
+        </a>
+      </section>
+
+      <footer>Effective date: May 10, 2026 | Contact: <a href="mailto:tomkuku588@gmail.com">tomkuku588@gmail.com</a></footer>
+    </section>
+  </main>
+
+  <script>
+    (function () {
+      var storageKey = "homevault-doc-lang";
+      var buttons = document.querySelectorAll("[data-lang-button]");
+      var sections = document.querySelectorAll(".lang-block");
+
+      function setLanguage(lang) {
+        var activeLang = lang === "en" ? "en" : "zh";
+        document.documentElement.lang = activeLang === "en" ? "en" : "zh-CN";
+        sections.forEach(function (section) {
+          section.hidden = section.getAttribute("data-lang") !== activeLang;
+        });
+        buttons.forEach(function (button) {
+          button.setAttribute("aria-pressed", String(button.getAttribute("data-lang-button") === activeLang));
+        });
+        try {
+          window.localStorage.setItem(storageKey, activeLang);
+        } catch (error) {
+          return;
+        }
+      }
+
+      buttons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          setLanguage(button.getAttribute("data-lang-button"));
+        });
+      });
+
+      try {
+        setLanguage(window.localStorage.getItem(storageKey) || "zh");
+      } catch (error) {
+        setLanguage("zh");
+      }
+    }());
+  </script>
+</body>
+</html>
