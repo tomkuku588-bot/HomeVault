@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tomkuku588-bot.github.io/HomeVault/sitemap.xml

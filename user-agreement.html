@@ -5,6 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>家庭资料收纳用户协议 | HomeVault User Agreement</title>
   <meta name="description" content="家庭资料收纳 HomeVault 用户协议">
+  <link rel="canonical" href="https://tomkuku588-bot.github.io/HomeVault/user-agreement.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://tomkuku588-bot.github.io/HomeVault/user-agreement.html?lang=zh">
+  <link rel="alternate" hreflang="en" href="https://tomkuku588-bot.github.io/HomeVault/user-agreement.html?lang=en">
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="HomeVault User Agreement">
+  <meta property="og:description" content="User Agreement for HomeVault.">
+  <meta property="og:url" content="https://tomkuku588-bot.github.io/HomeVault/user-agreement.html">
   <style>
     :root {
       color-scheme: light;
@@ -150,19 +158,44 @@
         width: 100%;
       }
     }
+
+    @media print {
+      body {
+        background: #ffffff;
+      }
+
+      main {
+        width: 100%;
+        padding: 0;
+      }
+
+      .topbar {
+        display: none;
+      }
+
+      article {
+        border: 0;
+        box-shadow: none;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+    }
   </style>
 </head>
 <body>
   <main>
     <div class="topbar">
-      <a class="back" href="./index.html" data-back-zh="返回协议中心" data-back-en="Back to Legal Center">返回协议中心</a>
+      <a class="back" href="./index.html?lang=zh" data-lang-link data-text-zh="返回协议中心" data-text-en="Back to Legal Center">返回协议中心</a>
       <div class="lang-switch" role="group" aria-label="Language switch">
         <button type="button" data-lang-button="zh" aria-pressed="true">中文</button>
         <button type="button" data-lang-button="en" aria-pressed="false">English</button>
       </div>
     </div>
 
-    <article class="lang-block" data-lang="zh">
+    <article class="lang-block" data-lang="zh" lang="zh-CN">
       <h1>家庭资料收纳用户协议</h1>
       <p class="meta">生效日期：2026年5月10日<br>适用应用：家庭资料收纳（HomeVault，<code>com.xmgod.familyrecords</code>）</p>
 
@@ -185,7 +218,7 @@
       <p>开发者名称以应用市场展示信息为准。联系邮箱：<a href="mailto:tomkuku588@gmail.com">tomkuku588@gmail.com</a>。</p>
     </article>
 
-    <article class="lang-block" data-lang="en" hidden>
+    <article class="lang-block" data-lang="en" lang="en" hidden>
       <h1>HomeVault User Agreement</h1>
       <p class="meta">Effective date: May 10, 2026<br>Applicable app: HomeVault, also known as 家庭资料收纳 (<code>com.xmgod.familyrecords</code>)</p>
 
@@ -209,44 +242,6 @@
     </article>
   </main>
 
-  <script>
-    (function () {
-      var storageKey = "homevault-doc-lang";
-      var buttons = document.querySelectorAll("[data-lang-button]");
-      var sections = document.querySelectorAll(".lang-block");
-      var backLink = document.querySelector(".back");
-
-      function setLanguage(lang) {
-        var activeLang = lang === "en" ? "en" : "zh";
-        document.documentElement.lang = activeLang === "en" ? "en" : "zh-CN";
-        sections.forEach(function (section) {
-          section.hidden = section.getAttribute("data-lang") !== activeLang;
-        });
-        buttons.forEach(function (button) {
-          button.setAttribute("aria-pressed", String(button.getAttribute("data-lang-button") === activeLang));
-        });
-        if (backLink) {
-          backLink.textContent = backLink.getAttribute(activeLang === "en" ? "data-back-en" : "data-back-zh");
-        }
-        try {
-          window.localStorage.setItem(storageKey, activeLang);
-        } catch (error) {
-          return;
-        }
-      }
-
-      buttons.forEach(function (button) {
-        button.addEventListener("click", function () {
-          setLanguage(button.getAttribute("data-lang-button"));
-        });
-      });
-
-      try {
-        setLanguage(window.localStorage.getItem(storageKey) || "zh");
-      } catch (error) {
-        setLanguage("zh");
-      }
-    }());
-  </script>
+  <script src="./assets/legal.js" defer></script>
 </body>
 </html>
