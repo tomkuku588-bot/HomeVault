@@ -12,7 +12,6 @@
 | `privacy-policy.md` | 隐私政策中文 Markdown 原文 |
 | `user-agreement.md` | 用户协议中文 Markdown 原文 |
 | `.nojekyll` | 让 GitHub Pages 原样托管静态文件 |
-| `.github/workflows/pages.yml` | GitHub Pages 自动部署工作流 |
 
 ## 线上链接
 
@@ -22,7 +21,7 @@
 git@github.com:tomkuku588-bot/HomeVault.git
 ```
 
-GitHub Pages 发布后可访问：
+GitHub Pages 已通过 `gh-pages` 分支发布，可访问：
 
 ```text
 协议中心：https://tomkuku588-bot.github.io/HomeVault/
@@ -30,7 +29,7 @@ GitHub Pages 发布后可访问：
 用户协议：https://tomkuku588-bot.github.io/HomeVault/user-agreement.html
 ```
 
-首次推送后 GitHub Actions 会自动部署 Pages，通常需要等待一两分钟。
+更新页面后，将同一内容推送到 `main` 和 `gh-pages` 分支即可刷新线上页面。
 
 ## 开发者信息
 
