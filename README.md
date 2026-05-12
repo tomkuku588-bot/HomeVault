@@ -11,11 +11,17 @@
 | `user-agreement.html` | 用户协议 HTML 页面，中英文切换 |
 | `404.html` | 中英文 404 兜底页 |
 | `privacy-policy.md` | 隐私政策中文 Markdown 原文 |
+| `privacy-policy.en.md` | 隐私政策英文 Markdown 原文 |
 | `user-agreement.md` | 用户协议中文 Markdown 原文 |
+| `user-agreement.en.md` | 用户协议英文 Markdown 原文 |
+| `legal-manifest.json` | 应用、开发者、协议链接和版本信息 |
+| `CHANGELOG.md` | 页面与协议托管变更记录 |
 | `assets/legal.js` | 页面语言切换与语言参数保留脚本 |
 | `assets/favicon.svg` | 网站图标 |
 | `robots.txt` | 搜索引擎抓取规则 |
 | `sitemap.xml` | 站点地图与中英文替代链接 |
+| `.editorconfig` | 编辑器格式规则 |
+| `.gitattributes` | Git 换行与二进制文件规则 |
 | `.nojekyll` | 让 GitHub Pages 原样托管静态文件 |
 
 ## 线上链接
@@ -34,9 +40,18 @@ GitHub Pages 已通过 `gh-pages` 分支发布，可访问：
 用户协议：https://tomkuku588-bot.github.io/HomeVault/user-agreement.html
 英文隐私政策：https://tomkuku588-bot.github.io/HomeVault/privacy-policy.html?lang=en
 英文用户协议：https://tomkuku588-bot.github.io/HomeVault/user-agreement.html?lang=en
+协议元数据：https://tomkuku588-bot.github.io/HomeVault/legal-manifest.json
 ```
 
 更新页面后，将同一内容推送到 `main` 和 `gh-pages` 分支即可刷新线上页面。
+
+## 维护流程
+
+1. 修改 Markdown 原文：中文改 `privacy-policy.md`、`user-agreement.md`，英文改 `privacy-policy.en.md`、`user-agreement.en.md`。
+2. 同步更新对应 HTML 页面中的正文、目录、版本号和最近更新日期。
+3. 如版本、日期或链接变化，同步更新 `legal-manifest.json`、`sitemap.xml` 和 `CHANGELOG.md`。
+4. 本地检查后提交，提交日志使用中文。
+5. 推送到 `main`，再同步推送到 `gh-pages` 发布线上页面。
 
 ## 开发者信息
 

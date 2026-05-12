@@ -1,0 +1,50 @@
+{
+  "app": {
+    "displayName": {
+      "zh-CN": "家庭资料收纳",
+      "en": "HomeVault"
+    },
+    "packageName": "com.xmgod.familyrecords"
+  },
+  "developer": {
+    "contactEmail": "tomkuku588@gmail.com"
+  },
+  "legal": {
+    "version": "1.0",
+    "effectiveDate": "2026-05-10",
+    "lastUpdated": "2026-05-12",
+    "baseUrl": "https://tomkuku588-bot.github.io/HomeVault/",
+    "documents": [
+      {
+        "type": "privacy-policy",
+        "title": {
+          "zh-CN": "隐私政策",
+          "en": "Privacy Policy"
+        },
+        "html": {
+          "zh-CN": "https://tomkuku588-bot.github.io/HomeVault/privacy-policy.html?lang=zh",
+          "en": "https://tomkuku588-bot.github.io/HomeVault/privacy-policy.html?lang=en"
+        },
+        "markdown": {
+          "zh-CN": "privacy-policy.md",
+          "en": "privacy-policy.en.md"
+        }
+      },
+      {
+        "type": "user-agreement",
+        "title": {
+          "zh-CN": "用户协议",
+          "en": "User Agreement"
+        },
+        "html": {
+          "zh-CN": "https://tomkuku588-bot.github.io/HomeVault/user-agreement.html?lang=zh",
+          "en": "https://tomkuku588-bot.github.io/HomeVault/user-agreement.html?lang=en"
+        },
+        "markdown": {
+          "zh-CN": "user-agreement.md",
+          "en": "user-agreement.en.md"
+        }
+      }
+    ]
+  }
+}
