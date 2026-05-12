@@ -101,6 +101,35 @@
       color: #ffffff;
     }
 
+    .doc-tools {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-left: auto;
+    }
+
+    .utility-button {
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 8px 12px;
+      background: var(--paper);
+      color: var(--accent-strong);
+      font: inherit;
+      font-size: 14px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .utility-button:hover {
+      border-color: var(--accent);
+    }
+
+    .copy-status {
+      color: var(--muted);
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
     article {
       padding: clamp(24px, 5vw, 56px);
       border: 1px solid var(--line);
@@ -119,6 +148,38 @@
     .meta {
       margin: 0 0 32px;
       color: var(--muted);
+    }
+
+    .doc-version {
+      margin-top: -20px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .toc {
+      margin: 26px 0 8px;
+      padding: 18px 20px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #f8fbfc;
+    }
+
+    .toc strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--accent-strong);
+    }
+
+    .toc ol {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 4px 18px;
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .toc a {
+      font-weight: 700;
     }
 
     h2 {
@@ -162,6 +223,20 @@
         flex-direction: column;
       }
 
+      .doc-tools {
+        align-items: stretch;
+        flex-wrap: wrap;
+        margin-left: 0;
+      }
+
+      .utility-button {
+        flex: 1 1 120px;
+      }
+
+      .copy-status {
+        flex-basis: 100%;
+      }
+
       .lang-switch,
       .lang-switch button {
         width: 100%;
@@ -182,6 +257,10 @@
         display: none;
       }
 
+      .toc {
+        break-inside: avoid;
+      }
+
       article {
         border: 0;
         box-shadow: none;
@@ -198,6 +277,11 @@
   <main>
     <div class="topbar">
       <a class="back" href="./index.html?lang=zh" data-lang-link data-text-zh="返回协议中心" data-text-en="Back to Legal Center">返回协议中心</a>
+      <div class="doc-tools" aria-label="文档工具">
+        <button type="button" class="utility-button" data-print-action data-text-zh="打印" data-text-en="Print">打印</button>
+        <button type="button" class="utility-button" data-copy-link data-text-zh="复制链接" data-text-en="Copy Link">复制链接</button>
+        <span class="copy-status" data-copy-status data-copied-zh="已复制当前语言链接" data-copied-en="Current language link copied" hidden></span>
+      </div>
       <div class="lang-switch" role="group" aria-label="Language switch">
         <button type="button" data-lang-button="zh" aria-pressed="true">中文</button>
         <button type="button" data-lang-button="en" aria-pressed="false">English</button>
@@ -207,15 +291,29 @@
     <article class="lang-block" data-lang="zh" lang="zh-CN">
       <h1>家庭资料收纳隐私政策</h1>
       <p class="meta">生效日期：2026年5月10日<br>适用应用：家庭资料收纳（HomeVault，<code>com.xmgod.familyrecords</code>）</p>
+      <p class="doc-version">版本：1.0 | 最近更新：2026年5月12日</p>
 
-      <h2>1. 我们处理哪些信息</h2>
+      <nav class="toc" aria-label="文档目录">
+        <strong>目录</strong>
+        <ol>
+          <li><a href="#privacy-info">我们处理哪些信息</a></li>
+          <li><a href="#privacy-purpose">使用目的</a></li>
+          <li><a href="#privacy-storage">存储与共享</a></li>
+          <li><a href="#privacy-permissions">权限与系统能力</a></li>
+          <li><a href="#privacy-manage">管理你的数据</a></li>
+          <li><a href="#privacy-retention">保留期限与安全</a></li>
+          <li><a href="#privacy-developer">开发者信息</a></li>
+        </ol>
+      </nav>
+
+      <h2 id="privacy-info">1. 我们处理哪些信息</h2>
       <p>本应用只处理你在本机主动录入的资料信息，包括：</p>
       <ul>
         <li>资料标题、分类、家庭成员名称、标签、日期、备注和维护状态。</li>
         <li>你主动添加附件时产生的文件名称、类型、大小和本地引用 URI。</li>
       </ul>
 
-      <h2>2. 使用目的</h2>
+      <h2 id="privacy-purpose">2. 使用目的</h2>
       <p>上述信息仅用于在应用内完成：</p>
       <ul>
         <li>资料建档、查看、编辑和删除。</li>
@@ -223,46 +321,60 @@
         <li>附件列表展示和本地数据清理。</li>
       </ul>
 
-      <h2>3. 存储与共享</h2>
+      <h2 id="privacy-storage">3. 存储与共享</h2>
       <ul>
         <li>资料和附件元数据保存在你的设备本地。</li>
         <li>本应用当前不提供账号、云同步、网络上传、广告、统计分析或第三方 SDK。</li>
         <li>本应用不向第三方共享你的资料。</li>
       </ul>
 
-      <h2>4. 权限与系统能力</h2>
+      <h2 id="privacy-permissions">4. 权限与系统能力</h2>
       <ul>
         <li>本应用不在启动时申请通讯录、定位、相机、麦克风、短信、电话等权限。</li>
         <li>只有你点击“添加附件”时，才会打开系统文件选择器。</li>
         <li>你取消文件选择后，仍可保存无附件资料。</li>
       </ul>
 
-      <h2>5. 管理你的数据</h2>
+      <h2 id="privacy-manage">5. 管理你的数据</h2>
       <ul>
         <li>你可以在应用内查看、修改和删除单条资料。</li>
         <li>你可以在“设置与数据”中清理本地资料和附件元数据。</li>
         <li>清理本地数据不会删除系统文件管理中的原始文件。</li>
       </ul>
 
-      <h2>6. 保留期限与安全</h2>
+      <h2 id="privacy-retention">6. 保留期限与安全</h2>
       <p>资料会保留到你主动删除、清理应用数据或卸载应用为止。请妥善保管设备解锁凭据，并自行备份重要原始文件。</p>
 
-      <h2>7. 开发者信息</h2>
+      <h2 id="privacy-developer">7. 开发者信息</h2>
       <p>开发者名称以应用市场展示信息为准。联系邮箱：<a href="mailto:tomkuku588@gmail.com">tomkuku588@gmail.com</a>。</p>
     </article>
 
     <article class="lang-block" data-lang="en" lang="en" hidden>
       <h1>HomeVault Privacy Policy</h1>
       <p class="meta">Effective date: May 10, 2026<br>Applicable app: HomeVault, also known as 家庭资料收纳 (<code>com.xmgod.familyrecords</code>)</p>
+      <p class="doc-version">Version: 1.0 | Last updated: May 12, 2026</p>
 
-      <h2>1. Information We Process</h2>
+      <nav class="toc" aria-label="Document contents">
+        <strong>Contents</strong>
+        <ol>
+          <li><a href="#privacy-info-en">Information We Process</a></li>
+          <li><a href="#privacy-purpose-en">Purposes of Use</a></li>
+          <li><a href="#privacy-storage-en">Storage and Sharing</a></li>
+          <li><a href="#privacy-permissions-en">Permissions and System Capabilities</a></li>
+          <li><a href="#privacy-manage-en">Managing Your Data</a></li>
+          <li><a href="#privacy-retention-en">Retention and Security</a></li>
+          <li><a href="#privacy-developer-en">Developer Information</a></li>
+        </ol>
+      </nav>
+
+      <h2 id="privacy-info-en">1. Information We Process</h2>
       <p>This app only processes information that you actively enter on your own device, including:</p>
       <ul>
         <li>Record titles, categories, family member names, tags, dates, notes, and maintenance status.</li>
         <li>When you add attachments, the file name, file type, file size, and local reference URI.</li>
       </ul>
 
-      <h2>2. Purposes of Use</h2>
+      <h2 id="privacy-purpose-en">2. Purposes of Use</h2>
       <p>The information above is used only inside the app to:</p>
       <ul>
         <li>Create, view, edit, and delete records.</li>
@@ -270,31 +382,31 @@
         <li>Display attachment lists and clean local data.</li>
       </ul>
 
-      <h2>3. Storage and Sharing</h2>
+      <h2 id="privacy-storage-en">3. Storage and Sharing</h2>
       <ul>
         <li>Records and attachment metadata are stored locally on your device.</li>
         <li>The app currently does not provide accounts, cloud sync, network uploads, advertising, analytics, or third-party SDKs.</li>
         <li>The app does not share your records with third parties.</li>
       </ul>
 
-      <h2>4. Permissions and System Capabilities</h2>
+      <h2 id="privacy-permissions-en">4. Permissions and System Capabilities</h2>
       <ul>
         <li>The app does not request contacts, location, camera, microphone, SMS, phone, or similar permissions when it starts.</li>
         <li>The system file picker opens only when you tap "Add Attachment".</li>
         <li>If you cancel file selection, you can still save a record without an attachment.</li>
       </ul>
 
-      <h2>5. Managing Your Data</h2>
+      <h2 id="privacy-manage-en">5. Managing Your Data</h2>
       <ul>
         <li>You can view, edit, and delete individual records in the app.</li>
         <li>You can clean local records and attachment metadata in "Settings and Data".</li>
         <li>Cleaning local data does not delete the original files in the system file manager.</li>
       </ul>
 
-      <h2>6. Retention and Security</h2>
+      <h2 id="privacy-retention-en">6. Retention and Security</h2>
       <p>Records are retained until you delete them, clear app data, or uninstall the app. Please keep your device unlock credentials secure and back up important original files yourself.</p>
 
-      <h2>7. Developer Information</h2>
+      <h2 id="privacy-developer-en">7. Developer Information</h2>
       <p>The developer name is subject to the app store listing. Contact email: <a href="mailto:tomkuku588@gmail.com">tomkuku588@gmail.com</a>.</p>
     </article>
   </main>

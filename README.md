@@ -9,6 +9,7 @@
 | `index.html` | 协议入口页，中英文切换 |
 | `privacy-policy.html` | 隐私政策 HTML 页面，中英文切换 |
 | `user-agreement.html` | 用户协议 HTML 页面，中英文切换 |
+| `404.html` | 中英文 404 兜底页 |
 | `privacy-policy.md` | 隐私政策中文 Markdown 原文 |
 | `user-agreement.md` | 用户协议中文 Markdown 原文 |
 | `assets/legal.js` | 页面语言切换与语言参数保留脚本 |

@@ -4,6 +4,10 @@
   var sections = document.querySelectorAll(".lang-block");
   var translatableText = document.querySelectorAll("[data-text-zh][data-text-en]");
   var languageLinks = document.querySelectorAll("[data-lang-link]");
+  var printButtons = document.querySelectorAll("[data-print-action]");
+  var copyButtons = document.querySelectorAll("[data-copy-link]");
+  var copyStatus = document.querySelector("[data-copy-status]");
+  var currentLanguage = "zh";
 
   function normalizeLanguage(lang) {
     return lang === "en" ? "en" : "zh";
@@ -55,6 +59,7 @@
 
   function setLanguage(lang, options) {
     var activeLang = normalizeLanguage(lang);
+    currentLanguage = activeLang;
     document.documentElement.lang = activeLang === "en" ? "en" : "zh-CN";
 
     sections.forEach(function (section) {
@@ -70,6 +75,10 @@
     });
 
     updateLanguageLinks(activeLang);
+    if (copyStatus) {
+      copyStatus.hidden = true;
+      copyStatus.textContent = "";
+    }
 
     try {
       window.localStorage.setItem(storageKey, activeLang);
@@ -85,6 +94,55 @@
   buttons.forEach(function (button) {
     button.addEventListener("click", function () {
       setLanguage(button.getAttribute("data-lang-button"));
+    });
+  });
+
+  printButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      window.print();
+    });
+  });
+
+  function getShareUrl() {
+    var url = new URL(window.location.href);
+    url.searchParams.set("lang", currentLanguage);
+    return url.href;
+  }
+
+  function copyWithFallback(text) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      return navigator.clipboard.writeText(text);
+    }
+
+    return new Promise(function (resolve, reject) {
+      var textarea = document.createElement("textarea");
+      textarea.value = text;
+      textarea.setAttribute("readonly", "");
+      textarea.style.position = "fixed";
+      textarea.style.top = "-1000px";
+      document.body.appendChild(textarea);
+      textarea.select();
+
+      try {
+        document.execCommand("copy");
+        resolve();
+      } catch (error) {
+        reject(error);
+      } finally {
+        document.body.removeChild(textarea);
+      }
+    });
+  }
+
+  copyButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      copyWithFallback(getShareUrl()).then(function () {
+        if (!copyStatus) {
+          return;
+        }
+        copyStatus.hidden = false;
+        copyStatus.textContent = copyStatus.getAttribute(currentLanguage === "en" ? "data-copied-en" : "data-copied-zh");
+      });
     });
   });
 
