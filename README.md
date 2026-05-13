@@ -1,14 +1,14 @@
 # HomeVault 协议托管页面
 
-这个目录用于托管家庭资料收纳（HomeVault，`com.xmgod.familyrecords`）的隐私政策和用户协议静态页面。页面支持中文和英文切换，可用于应用内展示和应用市场审核访问。
+这个目录用于托管家庭资料收纳（HomeVault，`com.xmgod.familyrecords`）的隐私政策和用户协议静态页面。主页为单页协议中心，支持在同一页面内切换隐私政策、用户协议、中文和英文，可用于应用内展示和应用市场审核访问。
 
 ## 文件清单
 
 | 文件 | 用途 |
 | --- | --- |
-| `index.html` | 协议入口页，中英文切换 |
-| `privacy-policy.html` | 隐私政策 HTML 页面，中英文切换 |
-| `user-agreement.html` | 用户协议 HTML 页面，中英文切换 |
+| `index.html` | 单页协议中心，支持协议类型和中英文切换 |
+| `privacy-policy.html` | 旧隐私政策链接兼容跳转页 |
+| `user-agreement.html` | 旧用户协议链接兼容跳转页 |
 | `404.html` | 中英文 404 兜底页 |
 | `privacy-policy.md` | 隐私政策中文 Markdown 原文 |
 | `privacy-policy.en.md` | 隐私政策英文 Markdown 原文 |
@@ -36,10 +36,10 @@ GitHub Pages 已通过 `gh-pages` 分支发布，可访问：
 
 ```text
 协议中心：https://tomkuku588-bot.github.io/HomeVault/
-隐私政策：https://tomkuku588-bot.github.io/HomeVault/privacy-policy.html
-用户协议：https://tomkuku588-bot.github.io/HomeVault/user-agreement.html
-英文隐私政策：https://tomkuku588-bot.github.io/HomeVault/privacy-policy.html?lang=en
-英文用户协议：https://tomkuku588-bot.github.io/HomeVault/user-agreement.html?lang=en
+隐私政策：https://tomkuku588-bot.github.io/HomeVault/?doc=privacy&lang=zh
+用户协议：https://tomkuku588-bot.github.io/HomeVault/?doc=agreement&lang=zh
+英文隐私政策：https://tomkuku588-bot.github.io/HomeVault/?doc=privacy&lang=en
+英文用户协议：https://tomkuku588-bot.github.io/HomeVault/?doc=agreement&lang=en
 协议元数据：https://tomkuku588-bot.github.io/HomeVault/legal-manifest.json
 ```
 
@@ -48,7 +48,7 @@ GitHub Pages 已通过 `gh-pages` 分支发布，可访问：
 ## 维护流程
 
 1. 修改 Markdown 原文：中文改 `privacy-policy.md`、`user-agreement.md`，英文改 `privacy-policy.en.md`、`user-agreement.en.md`。
-2. 同步更新对应 HTML 页面中的正文、目录、版本号和最近更新日期。
+2. 同步更新 `index.html` 中对应协议的正文、目录、版本号和最近更新日期。
 3. 如版本、日期或链接变化，同步更新 `legal-manifest.json`、`sitemap.xml` 和 `CHANGELOG.md`。
 4. 本地检查后提交，提交日志使用中文。
 5. 推送到 `main`，再同步推送到 `gh-pages` 发布线上页面。

@@ -10,9 +10,9 @@
     "contactEmail": "tomkuku588@gmail.com"
   },
   "legal": {
-    "version": "1.0",
+    "version": "1.1",
     "effectiveDate": "2026-05-10",
-    "lastUpdated": "2026-05-12",
+    "lastUpdated": "2026-05-13",
     "baseUrl": "https://tomkuku588-bot.github.io/HomeVault/",
     "documents": [
       {
@@ -22,8 +22,8 @@
           "en": "Privacy Policy"
         },
         "html": {
-          "zh-CN": "https://tomkuku588-bot.github.io/HomeVault/privacy-policy.html?lang=zh",
-          "en": "https://tomkuku588-bot.github.io/HomeVault/privacy-policy.html?lang=en"
+          "zh-CN": "https://tomkuku588-bot.github.io/HomeVault/?doc=privacy&lang=zh",
+          "en": "https://tomkuku588-bot.github.io/HomeVault/?doc=privacy&lang=en"
         },
         "markdown": {
           "zh-CN": "privacy-policy.md",
@@ -37,8 +37,8 @@
           "en": "User Agreement"
         },
         "html": {
-          "zh-CN": "https://tomkuku588-bot.github.io/HomeVault/user-agreement.html?lang=zh",
-          "en": "https://tomkuku588-bot.github.io/HomeVault/user-agreement.html?lang=en"
+          "zh-CN": "https://tomkuku588-bot.github.io/HomeVault/?doc=agreement&lang=zh",
+          "en": "https://tomkuku588-bot.github.io/HomeVault/?doc=agreement&lang=en"
         },
         "markdown": {
           "zh-CN": "user-agreement.md",

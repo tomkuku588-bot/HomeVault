@@ -3,356 +3,43 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>家庭资料收纳用户协议 | HomeVault User Agreement</title>
-  <meta name="description" content="家庭资料收纳 HomeVault 用户协议">
-  <link rel="canonical" href="https://tomkuku588-bot.github.io/HomeVault/user-agreement.html">
-  <link rel="alternate" hreflang="zh-CN" href="https://tomkuku588-bot.github.io/HomeVault/user-agreement.html?lang=zh">
-  <link rel="alternate" hreflang="en" href="https://tomkuku588-bot.github.io/HomeVault/user-agreement.html?lang=en">
-  <link rel="alternate" type="application/json" href="./legal-manifest.json">
+  <title>用户协议已迁移 | User Agreement Moved</title>
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="https://tomkuku588-bot.github.io/HomeVault/?doc=agreement&lang=zh">
   <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
-  <meta property="og:type" content="article">
-  <meta property="og:title" content="HomeVault User Agreement">
-  <meta property="og:description" content="User Agreement for HomeVault.">
-  <meta property="og:url" content="https://tomkuku588-bot.github.io/HomeVault/user-agreement.html">
   <style>
-    :root {
-      color-scheme: light;
-      --bg: #f6f8fb;
-      --paper: #ffffff;
-      --text: #1f2933;
-      --muted: #5e6b7a;
-      --line: #dbe3ee;
-      --accent: #0f766e;
-      --accent-strong: #0b5f59;
-      --focus: #f59e0b;
-      --code: #eef4f3;
-      --shadow: 0 18px 42px rgba(31, 41, 51, 0.08);
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
     body {
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.75;
+      background: #f6f8fb;
+      color: #1f2933;
+      line-height: 1.7;
     }
 
     main {
-      width: min(920px, calc(100% - 32px));
+      width: min(680px, calc(100% - 32px));
       margin: 0 auto;
-      padding: 36px 0 72px;
-    }
-
-    .topbar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      margin-bottom: 18px;
+      padding: 72px 0;
     }
 
     a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    a:focus-visible,
-    button:focus-visible {
-      outline: 3px solid var(--focus);
-      outline-offset: 3px;
-    }
-
-    .back {
-      font-size: 15px;
-      font-weight: 700;
-    }
-
-    .lang-switch {
-      display: inline-flex;
-      gap: 4px;
-      padding: 4px;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      background: var(--paper);
-      box-shadow: var(--shadow);
-    }
-
-    .lang-switch button {
-      min-width: 76px;
-      border: 0;
-      border-radius: 6px;
-      padding: 8px 12px;
-      background: transparent;
-      color: var(--muted);
-      font: inherit;
-      font-weight: 700;
-      cursor: pointer;
-    }
-
-    .lang-switch button[aria-pressed="true"] {
-      background: var(--accent);
-      color: #ffffff;
-    }
-
-    .doc-tools {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-left: auto;
-    }
-
-    .utility-button {
-      border: 1px solid var(--line);
-      border-radius: 6px;
-      padding: 8px 12px;
-      background: var(--paper);
-      color: var(--accent-strong);
-      font: inherit;
-      font-size: 14px;
+      color: #0f766e;
       font-weight: 800;
-      cursor: pointer;
-    }
-
-    .utility-button:hover {
-      border-color: var(--accent);
-    }
-
-    .copy-status {
-      color: var(--muted);
-      font-size: 13px;
-      white-space: nowrap;
-    }
-
-    article {
-      padding: clamp(24px, 5vw, 56px);
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      background: var(--paper);
-      box-shadow: var(--shadow);
-    }
-
-    h1 {
-      margin: 0 0 12px;
-      font-size: clamp(28px, 5vw, 42px);
-      line-height: 1.2;
-      letter-spacing: 0;
-    }
-
-    .meta {
-      margin: 0 0 32px;
-      color: var(--muted);
-    }
-
-    .doc-version {
-      margin-top: -20px;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .toc {
-      margin: 26px 0 8px;
-      padding: 18px 20px;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      background: #f8fbfc;
-    }
-
-    .toc strong {
-      display: block;
-      margin-bottom: 8px;
-      color: var(--accent-strong);
-    }
-
-    .toc ol {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 4px 18px;
-      margin: 0;
-      padding-left: 20px;
-    }
-
-    .toc a {
-      font-weight: 700;
-    }
-
-    h2 {
-      margin: 30px 0 10px;
-      font-size: 22px;
-      letter-spacing: 0;
-    }
-
-    p {
-      margin: 0 0 12px;
-    }
-
-    code {
-      padding: 2px 6px;
-      border-radius: 4px;
-      background: var(--code);
-      font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
-      font-size: 0.95em;
-    }
-
-    [hidden] {
-      display: none !important;
-    }
-
-    @media (max-width: 560px) {
-      main {
-        padding-top: 22px;
-      }
-
-      .topbar {
-        align-items: stretch;
-        flex-direction: column;
-      }
-
-      .doc-tools {
-        align-items: stretch;
-        flex-wrap: wrap;
-        margin-left: 0;
-      }
-
-      .utility-button {
-        flex: 1 1 120px;
-      }
-
-      .copy-status {
-        flex-basis: 100%;
-      }
-
-      .lang-switch,
-      .lang-switch button {
-        width: 100%;
-      }
-    }
-
-    @media print {
-      body {
-        background: #ffffff;
-      }
-
-      main {
-        width: 100%;
-        padding: 0;
-      }
-
-      .topbar {
-        display: none;
-      }
-
-      .toc {
-        break-inside: avoid;
-      }
-
-      article {
-        border: 0;
-        box-shadow: none;
-      }
-
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
     }
   </style>
 </head>
 <body>
   <main>
-    <div class="topbar">
-      <a class="back" href="./index.html?lang=zh" data-lang-link data-text-zh="返回协议中心" data-text-en="Back to Legal Center">返回协议中心</a>
-      <div class="doc-tools" aria-label="文档工具">
-        <button type="button" class="utility-button" data-print-action data-text-zh="打印" data-text-en="Print">打印</button>
-        <button type="button" class="utility-button" data-copy-link data-text-zh="复制链接" data-text-en="Copy Link">复制链接</button>
-        <span class="copy-status" data-copy-status data-copied-zh="已复制当前语言链接" data-copied-en="Current language link copied" hidden></span>
-      </div>
-      <div class="lang-switch" role="group" aria-label="Language switch">
-        <button type="button" data-lang-button="zh" aria-pressed="true">中文</button>
-        <button type="button" data-lang-button="en" aria-pressed="false">English</button>
-      </div>
-    </div>
-
-    <article class="lang-block" data-lang="zh" lang="zh-CN">
-      <h1>家庭资料收纳用户协议</h1>
-      <p class="meta">生效日期：2026年5月10日<br>适用应用：家庭资料收纳（HomeVault，<code>com.xmgod.familyrecords</code>）</p>
-      <p class="doc-version">版本：1.0 | 最近更新：2026年5月12日</p>
-
-      <nav class="toc" aria-label="文档目录">
-        <strong>目录</strong>
-        <ol>
-          <li><a href="#agreement-scope">服务范围</a></li>
-          <li><a href="#agreement-rules">使用规则</a></li>
-          <li><a href="#agreement-backups">数据与备份</a></li>
-          <li><a href="#agreement-responsibility">责任边界</a></li>
-          <li><a href="#agreement-changes">协议变更</a></li>
-          <li><a href="#agreement-developer">开发者信息</a></li>
-        </ol>
-      </nav>
-
-      <h2 id="agreement-scope">1. 服务范围</h2>
-      <p>本应用提供本地家庭资料管理工具，包括资料建档、编辑、删除、搜索筛选、维护状态、资料模板和附件引用管理。</p>
-
-      <h2 id="agreement-rules">2. 使用规则</h2>
-      <p>你应确保录入、保存和维护的资料来源合法、内容真实，并不得使用本应用保存或传播违法违规、侵犯他人权益的内容。</p>
-
-      <h2 id="agreement-backups">3. 数据与备份</h2>
-      <p>本应用默认仅在本机保存资料，不提供云备份或跨设备恢复。卸载应用、清理应用数据、设备故障或系统恢复可能导致数据丢失，重要资料请自行保留原件或备份。</p>
-
-      <h2 id="agreement-responsibility">4. 责任边界</h2>
-      <p>本应用不对证件、合同、医疗、保险、财务或其他资料的真实性、有效性和专业结论作判断，也不替代法律、医疗、保险或财务建议。</p>
-
-      <h2 id="agreement-changes">5. 协议变更</h2>
-      <p>协议内容更新时，应用会再次提示你阅读并确认。若你不同意本协议或后续变更，请停止使用本应用。</p>
-
-      <h2 id="agreement-developer">6. 开发者信息</h2>
-      <p>开发者名称以应用市场展示信息为准。联系邮箱：<a href="mailto:tomkuku588@gmail.com">tomkuku588@gmail.com</a>。</p>
-    </article>
-
-    <article class="lang-block" data-lang="en" lang="en" hidden>
-      <h1>HomeVault User Agreement</h1>
-      <p class="meta">Effective date: May 10, 2026<br>Applicable app: HomeVault, also known as 家庭资料收纳 (<code>com.xmgod.familyrecords</code>)</p>
-      <p class="doc-version">Version: 1.0 | Last updated: May 12, 2026</p>
-
-      <nav class="toc" aria-label="Document contents">
-        <strong>Contents</strong>
-        <ol>
-          <li><a href="#agreement-scope-en">Service Scope</a></li>
-          <li><a href="#agreement-rules-en">Usage Rules</a></li>
-          <li><a href="#agreement-backups-en">Data and Backups</a></li>
-          <li><a href="#agreement-responsibility-en">Responsibility Boundaries</a></li>
-          <li><a href="#agreement-changes-en">Agreement Changes</a></li>
-          <li><a href="#agreement-developer-en">Developer Information</a></li>
-        </ol>
-      </nav>
-
-      <h2 id="agreement-scope-en">1. Service Scope</h2>
-      <p>The app provides a local family records management tool, including record creation, editing, deletion, search and filtering, maintenance status, record templates, and attachment reference management.</p>
-
-      <h2 id="agreement-rules-en">2. Usage Rules</h2>
-      <p>You should ensure that the records you enter, save, and maintain come from lawful sources and contain accurate content. You must not use the app to save or distribute content that is illegal, non-compliant, or infringes the rights of others.</p>
-
-      <h2 id="agreement-backups-en">3. Data and Backups</h2>
-      <p>By default, the app stores records only on your device and does not provide cloud backup or cross-device recovery. Uninstalling the app, clearing app data, device failure, or system restoration may cause data loss. Please keep originals or backups of important materials yourself.</p>
-
-      <h2 id="agreement-responsibility-en">4. Responsibility Boundaries</h2>
-      <p>The app does not judge the authenticity, validity, or professional conclusions of certificates, contracts, medical, insurance, financial, or other materials, and it does not replace legal, medical, insurance, or financial advice.</p>
-
-      <h2 id="agreement-changes-en">5. Agreement Changes</h2>
-      <p>When the agreement is updated, the app will prompt you to read and confirm it again. If you do not agree to this agreement or later changes, please stop using the app.</p>
-
-      <h2 id="agreement-developer-en">6. Developer Information</h2>
-      <p>The developer name is subject to the app store listing. Contact email: <a href="mailto:tomkuku588@gmail.com">tomkuku588@gmail.com</a>.</p>
-    </article>
+    <h1>用户协议已合并到协议中心</h1>
+    <p>页面将自动跳转到单页协议中心。若未跳转，请点击：<a href="./index.html?doc=agreement&lang=zh">查看用户协议</a>。</p>
+    <p>The User Agreement has moved to the single-page Legal Center. If you are not redirected, open: <a href="./index.html?doc=agreement&lang=en">User Agreement</a>.</p>
   </main>
-
-  <script src="./assets/legal.js" defer></script>
+  <script>
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var lang = params.get("lang") === "en" ? "en" : "zh";
+      window.location.replace("./index.html?doc=agreement&lang=" + lang);
+    }());
+  </script>
 </body>
 </html>
